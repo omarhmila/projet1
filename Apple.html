@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+      input {
+            padding: 18px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+      input:hover {
+            background-color: #db0f00;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+function afficheprix() {
+ var  res = 0 ;
+ var output = "" ;
+ var outputs = "" ;
+ 
+
+if((F1.a13.value) != undefined  && (F1.a128.value)!=undefined  ) 
+  res= Number(F1.a13.value) + Number(F1.a128.value);
+
+
+if ( F1.a13.value  == "3000")
+outputs =  "Le prix du Iphone 13 pro max"   ;
+else if ( F1.a13.value == "3700" ) 
+outputs = "Le prix du iphone 14 pro max"  ;
+else if ( F1.a13.value == "4100" )  
+outputs = "Le prix du iphone 15 pro max" ;
+
+
+if ( F1.a128.value == "500")
+output =  outputs + " avec une capacite de 128Go  est :  "+ res + "dt";
+else if ( F1.a128.value == "700" ) 
+output =  outputs + " avec une capacite de 256Go  est :  "+ res + "dt";
+else if ( F1.a128.value == "1000" )  
+output =  outputs + " avec une capacite de 512Go  est :  "+ res + "dt";
+
+
+alert(output);
+
+
+}
+
+    </script>
+    <form name="F1">
+<h2>choisir le modele prefere</h2>
+
+    <input type="radio"  name="a13" value="3000" checked>
+<label for="13">Iphone 13 pro max</label><br>
+
+<input type="radio"  name="a13" value="3700">
+<label for="css">Iphone 14 pro max</label><br>
+
+<input type="radio"  name="a13" value="4100">
+<label for="15">Iphone 15 pro max</label><br>
+
+
+
+<h2>choisir la capacite du stockage</h2>
+    <input type="radio"  name="a128" value="500" checked >
+<label for="html">128Go</label><br>
+
+<input type="radio"  name="a128" value="700">
+<label for="css3">256Go</label><br>
+
+<input type="radio" name="a128" value="1000">
+<label for="css2">512Go</label><br>
+
+<input type="button" name="connexion" value="le devis" onclick= "afficheprix()" >
+</form>
+</body>
+</html>
